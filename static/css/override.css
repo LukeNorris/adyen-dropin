@@ -1,0 +1,226 @@
+/* all style calsses: https://github.com/Adyen/adyen-web/blob/main/README.md#styling */
+:root {
+    --adyen-sdk-color-label-primary:#00112c; /* - Label color inside payment forms, such as form instruction, form field labels and contextual / helper texts.
+    - Fieldset title color
+    - Input field text color
+    - Drop-in payment method header, order payment method header, default status text color.
+    - Bacs Edit button text color
+    - Introduction text color for Bank Transfer, Vouchers, Blik
+    - Donation status text color, campaign background color
+    - UPI, ANCV, Blik, MBWay await container text color
+    - Secondary, ghost buttons text color
+    - (Consent) checkbox label color*/
+    --adyen-sdk-color-label-secondary: #5c687c; /* - Label color for the additional information in the drop-in payment method header.
+    - Disclaimer label color.
+    - QR count down label color.
+    - Readonly select and input color.*/
+    --adyen-sdk-color-label-tertiary: #8d95a3; /* - Label color for the click to pay labels.*/
+    --adyen-sdk-color-label-disabled:#8d95a3; /* - Label color for the disabled Click to Pay logout button.
+    - Disabled segment.
+    - Background color for the payment button in the loading state.*/
+    --adyen-sdk-color-label-critical: #e22d2d; /* - Border color for the error input fields and error validation message.*/
+    --adyen-sdk-color-label-highlight:#0070f5; /* - Link button color.*/
+    --adyen-sdk-color-label-on-color:#ffffff; /* - Button text color.
+    - Donation campaign description text color.
+    - Checkbox check color.*/
+    --adyen-sdk-color-background-primary:rgb(241, 241, 241); /* - Background color for the Secondary pay button.
+    - Background color for payment form elements: input element, radio, select, checkbox.
+    - Background color for drop-in unselected payment items.*/
+    --adyen-sdk-color-background-secondary: #f7f7f8; /* - Background color for drop-in selected payment method item.
+    - Background color for selected button inside button group (used in the Donation component).*/
+    --adyen-sdk-color-background-secondary-hover:#eeeff1; /* - Background color for ghost button hover.*/
+    --adyen-sdk-color-background-secondary-active:#e3e5e9; /* - Background color for ghost button active.*/
+    --adyen-sdk-color-background-tertiary:#eeeff1;   /* - Background color for segmented control used by the UPI.*/
+    --adyen-sdk-color-background-disabled:#eeeff1; /* - Background color for disabled form elements.*/
+    --adyen-sdk-color-background-critical-strong:#e22d2d; /* - Background color for drop-in remove stored payment methods confirmation button.*/
+    --adyen-sdk-color-background-inverse-primary-hover:#5c687c;/* - Background color for hovering on payment button.*/
+    --adyen-sdk-color-background-always-dark:#00112c;  /* - Background color for the primary payment button.*/
+    --adyen-sdk-color-background-always-dark-active:#8d95a3;	/*- Background color for the active and hovered primary payment button.*/
+    --adyen-sdk-color-background-critical-strong: #e22d2d;/* - Background color for ghost button hover.*/
+    --adyen-sdk-color-outline-primary:#dbdee2;/* - Drop-in payment method list item unselected border color.
+    - Highlighted issuers button box shadow color.
+    - Payment form elements (including checkbox and radio) border color.*/
+    --adyen-sdk-color-outline-primary-hover: #c9cdd3;/* - Drop-in payment method list item hover and unselected box-shadow color.
+    - Radio and checkbox hover not focused box-shadow color.*/
+    --adyen-sdk-color-outline-primary-active: #00112c;/* - Form input elements focused box-shadow and border color. */
+    --adyen-sdk-color-outline-secondary:#c9cdd3;/* - Drop-in selected payment item border color.
+    - Drop-in default status container border color.
+    - UPI, ANCV, Blik, MBWay await container border color.
+    - QR code container border color.*/
+    --adyen-sdk-color-outline-tertiary: #8d95a3;/* - Drop-in order payment border color, surcharge text color
+    - Gif card balance text color
+    - UPI, ANCV, Blik, MBWay await count down text color
+    - Radio, checkbox hover box-shadow color
+    - Pay / regular button focus box-shadow color
+    - Content separator color*/
+    --adyen-sdk-color-outline-disabled:#dbdee2;/* - Secondary button disabled border color*/
+    --adyen-sdk-color-outline-critical:#e22d2d;/*- Drop down invalid button border color*/
+    --adyen-sdk-color-separator-primary:#dbdee2;/* - Input, select, checkbox and radio form fields invalid border color.*/
+    --adyen-sdk-text-caption-line-height:18px;/* - Various places that are not body / subtitle / title*/
+    --adyen-sdk-text-caption-font-size: 12px;/* - Gift card alert message font size
+    - Drop-in payment method list item additional information text font size
+    - Disclaimer message text font size
+    - Form field instruction, contextual, error text font size*/
+    --adyen-sdk-text-body-font-size:14px;/* - Various places that are not title / sub title / captio:*/
+    --adyen-sdk-text-body-line-height:20px;	/* - Radio text line height
+    - Payme instruction line height
+    - Click to pay otp checkbox info line height
+    - Form field label line height*/
+    --adyen-sdk-text-body-font-weight:400;/*- Stored card expiry date input text font weight*/
+    --adyen-sdk-text-body-stronger-font-weight: 500;/* - Selected issuer button text font weight
+    - Drop-in payment method list item title font weight
+    - Drop-in order header and deducted amount font weight
+    - Trustly description font weight
+    - Pay button text font weight
+    - UPI segmented control text font weight*/
+    --adyen-sdk-text-subtitle-font-size: 16px;/* - Blik helper font size
+    - Trustly description header
+    - UPI, ANCV, Blik, MBWay await subtitle and indicator font size
+    - QR subtitle and indicator font size
+    - Input, drop down input fields text font size
+    - Voucher amount font size*/
+    --adyen-sdk-text-subtitle-font-weight:500;/* - Field set title font weight*/
+    --adyen-sdk-text-subtitle-stronger-font-weight:600;/* - Drop-in payment method list label font weigh*/
+    --adyen-sdk-text-subtitle-line-height:26px;/* - Drop-in payment method list label line height
+    - Field set title line height*/
+    --adyen-sdk-text-title-font-size:16px;/*- Drop-in default final statuses font size
+    - Drop-in order header font size
+    - Drop-in payment method list item title font size
+    - Pay button text font size
+    - Directdebit_GB voucher result introduction font size
+    - Donation campaign title font size
+    */
+    --adyen-sdk-text-title-font-weight: 600; /*- Field set title font weight*/
+    --adyen-sdk-text-title-line-height: 26px;/* - Stored card expiry date input text line height*/
+    --adyen-sdk-text-title-l-font-size:24px; /* - Voucher reference text font-size */ 
+    --adyen-sdk-spacer-100:32px;	/* - Various places for dimensions*/
+    --adyen-sdk-spacer-110:	40px;	/* - Various places for dimensions */  
+    --adyen-sdk-spacer-120:	48px;	/* - Various places for dimensions */
+    --adyen-sdk-spacer-130:	56px;	/* Various places for dimensions */
+    --adyen-sdk-spacer-140: 64px;	/*Various places for dimensions*/   
+    --adyen-sdk-spacer-000:	0px;	/*Various places for dimensions*/
+    --adyen-sdk-spacer-010:	2px;	/*Various places for dimensions*/
+    --adyen-sdk-spacer-020:	4px;	/*Various places for dimensions*/
+    --adyen-sdk-spacer-030:	6px;	/*Various places for dimensions*/
+    --adyen-sdk-spacer-040:	8px;	/*Various places for dimensions*/
+    --adyen-sdk-spacer-050:	10px;	/*Various places for dimensions*/
+    --adyen-sdk-spacer-060:	12px;	/*Various places for dimensions */
+    --adyen-sdk-spacer-070:	16px;	/*Various places for dimensions */
+    --adyen-sdk-spacer-080:	20px;	/*Various places for dimensions */
+    --adyen-sdk-spacer-090:	24px;	/*Various places for dimensions */
+    --adyen-sdk-border-radius-xs:	2px;	/*Various places for border radius */
+    --adyen-sdk-border-radius-s:	4px;	/*Various places for border radius */
+    --adyen-sdk-border-radius-m:	8px;	/*Various places for border radius */
+    --adyen-sdk-border-radius-l:	12px;	/*Various places for border radius */
+    --adyen-sdk-border-radius-xl:	24px;	/*Various places for border radius */
+    --adyen-sdk-border-width-s:	0px;	/*Various places for border radius */
+    --adyen-sdk-border-width-m:	0px;	/*Various places for border radius */
+    --adyen-sdk-border-width-l:	0px;	/*Various places for border radius */
+    --adyen-sdk-shadow-low:	0px 2px 4px rgba(0, 17, 44, 0.04), 0px 1px 2px rgba(0, 17, 44, 0.02);	/*- Box shadow for Card available brand images and voucher brand images
+    - Box shadow for selected segment */
+/* - Field set title font weight*/
+/* - Field set title font weight*/
+/* - Field set title font weight*/
+    --adyen-checkout-input-wrapper-focus-border-color: #44f1e5;
+    --adyen-sdk-color-background-inverse-primary-hover:#db1a71;
+
+    --adyen-checkout-button-background: #28a745;
+    --adyen-checkout-button-background-hover: #218838;
+    --adyen-checkout-button-text: #ffffff;
+    --adyen-checkout-button-border-radius: 8px;
+
+    /* Input fields */
+    --adyen-checkout-input-background: #f8f9fa;
+    --adyen-checkout-input-border-color: #ced4da;
+    --adyen-checkout-input-wrapper-focus-border-color: #44f1e5; /* Your existing color */
+    --adyen-checkout-input-placeholder-text: #6c757d;
+
+    /* Fonts */
+    --adyen-checkout-font-family: 'Inter', sans-serif;
+    --adyen-checkout-font-size: 14px;
+    --adyen-checkout-font-weight-bold: 700;
+
+    /* Card component */
+    --adyen-checkout-card-input-border-color: #007bff;
+    --adyen-checkout-card-brand-logo-background: #e9ecef;
+
+    /* General */
+    --adyen-checkout-color-error: #dc3545;
+    --adyen-checkout-color-text: #212529;
+  }
+
+
+/*.adyen-checkout__button--pay: The main pay button.
+.adyen-checkout__input: General input fields (e.g., card number, expiry).
+.adyen-checkout__input--error: Input fields in error state.
+.adyen-checkout__label: Labels for input fields.
+.adyen-checkout__card__brand-logo: Card brand logo container.
+.adyen-checkout__dropdown__button: Dropdown buttons (e.g., expiry month/year).
+.adyen-checkout__spinner: Loading spinner.*/
+
+.adyen-checkout__button--pay {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 16px !important;
+    padding: 12px 24px !important;
+}
+
+.adyen-checkout__input {
+    border: 0px solid #007bff !important;
+    color: #333333 !important;
+    background-color: rgb(247, 247, 248);
+}
+.adyen-checkout-form-instruction {
+    display: none;
+}
+
+.adyen-checkout__payment-method, .adyen-checkout__payment-method--scheme, .adyen-checkout__payment-method--credit, .adyen-checkout__payment-method--selected .adyen-checkout__payment-method--standalone .scheme-fbed2138-c67a-42d5-a861-d9632a1e8991 {
+    display: flex;
+    align-items: center;
+    /*justify-content: space-between;*/  /* space out the children */
+    /*flex-wrap: wrap;    */             /* prevent horizontal overflow */
+    gap: 0rem;                       /* optional horizontal spacing */
+    box-sizing: border-box;          /* ensure padding doesn't cause overflow */
+    max-width: 100%;                  /* optional spacing between items */
+    background-color: #f1f1f1;
+  }
+  
+  /* The child elements will now appear side-by-side by default */
+  .adyen-checkout__payment-method__header,
+  .adyen-checkout-pm-details-wrapper {
+    margin: 0;         /* or a smaller margin if needed */
+    padding: 0.5rem;   /* adjust as desired */
+    flex: 0 1 auto;    /* let them shrink/grow within the container */
+    box-sizing: border-box;  /* or flex: 1; or whatever suits your layout */
+    width: max-content;
+  }
+
+  .adyen-checkout__payment-method__details__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* space out the children */
+    /*flex-wrap: wrap;  */ 
+    width: 100%;              /* prevent horizontal overflow */
+    gap: 1rem;                       /* optional horizontal spacing */
+    box-sizing: border-box;          /* ensure padding doesn't cause overflow */
+    max-width: 100%;                 /* optional spacing between items */ 
+  }
+  .adyen-checkout__payment-method__details__content,
+  .adyen-checkout__button .adyen-checkout__button--pay {
+    margin: 0;         /* or a smaller margin if needed */
+    padding: 0.5rem;   /* adjust as desired */
+    flex: 0 1 auto;    /* let them shrink/grow within the container */
+    box-sizing: border-box; /* or flex: 1; or whatever suits your layout */
+    width: auto;
+  }
+
+  .adyen-checkout__payment-method__details__content>:last-child {
+   margin-left: 10rem;
+  }
+
+  .adyen-checkout__button--pay {
+    width: auto !important;            /* override full width */
+    max-width: 200px;        /* or whatever width you want */
+    margin-left: auto;       /* push it to the right if in a flex container,
+                                or use float: right; if needed */
+    float: right;            /* alternative method if not in a flex container */
+  }

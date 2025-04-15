@@ -1,0 +1,80 @@
+/* Overall page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    padding: 30px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+  
+  /* Create a flex container to position drop-in and order summary side-by-side */
+  .flex-container {
+    display: flex;
+    justify-content: space-between; /* The two children will sit at the extreme left and right */
+    gap: 20px;  /* Optional spacing between the two blocks */
+  }
+  
+  /* The drop-in container will expand to use more space */
+  .dropin-container {
+    flex: 2;  /* Adjust the ratio as needed; this takes 2/3 of the row if order-summary is flex: 1 */
+  }
+  
+  /* The order summary container on the right */
+  .order-summary {
+    flex: 1;   /* Adjust as needed; this takes 1/3 of the row */
+    background-color: #f1f1f1;
+    border-radius: 6px;
+    padding: 15px;
+  }
+  
+  /* Example styles for headings and list items */
+  h1, h2 {
+    color: #333;
+  }
+  
+  .order-summary ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .order-summary li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.login-btn {
+    background-color: #003087;
+    color: white;
+}
+
+.guest-btn {
+    background-color: #0070ba;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Adyen Checkout</title>
+  <script src="https://checkoutshopper-live.cdn.adyen.com/checkoutshopper/sdk/6.11.0/adyen.js"
+     integrity="sha384-wwiuyx0VwdDwaHvlLtdCKeUuFCNIMDrWrQI24PdEMMMGgOZPHirMZfXHNgrk6DG5"
+     crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+        href="https://checkoutshopper-live.cdn.adyen.com/checkoutshopper/sdk/6.11.0/adyen.css"
+        integrity="sha384-grpuyJ9vAlVrx/mBLXLO3V2f9W3m5KKYx34MzigvvPqArvi0WqWoD/Pl++yf15EU"
+        crossorigin="anonymous">
+  <!-- You can either add this CSS inline in a <style> tag or reference your CSS file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/checkout.css') }}">
+</head>
+<body data-page="checkout">
+  <div class="container">
+    <div class="flex-container">
+      <!-- Left side: Drop-in container -->
+      <div class="dropin-container">
+        <h1>Dropin Example</h1>
+        <div id="dropin"></div>
+      </div>
+      
+      <!-- Right side: Order summary -->
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+        <ul>
+          <li><span>Product 1</span><span>€50.00</span></li>
+          <li><span>Product 2</span><span>€30.00</span></li>
+          <li><strong>Total</strong><strong>€80.00</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/checkout.js') }}"></script>
+</body>
+</html>

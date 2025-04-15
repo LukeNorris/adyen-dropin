@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start Checkout</title>
+    <script src="https://checkoutshopper-live.cdn.adyen.com/checkoutshopper/sdk/6.11.0/adyen.js"
+     integrity="sha384-wwiuyx0VwdDwaHvlLtdCKeUuFCNIMDrWrQI24PdEMMMGgOZPHirMZfXHNgrk6DG5"
+     crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet"
+        href="https://checkoutshopper-live.cdn.adyen.com/checkoutshopper/sdk/6.11.0/adyen.css"
+        integrity="sha384-grpuyJ9vAlVrx/mBLXLO3V2f9W3m5KKYx34MzigvvPqArvi0WqWoD/Pl++yf15EU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/start_checkout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/override.css') }}">
+</head>
+ <body data-page="start"> <!--this data data atribute passes the value to the checkout.js -->
+    <div class="container">
+        <h1>Checkout</h1>
+
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <ul>
+                <li><span>Product 1</span><span>€50.00</span></li>
+                <li><span>Product 2</span><span>€30.00</span></li>
+                <li><strong>Total</strong><strong>€80.00</strong></li>
+            </ul>
+            <div id="dropin"></div>
+        </div>
+
+        <div class="buttons">
+            <button class="guest-btn" onclick="redirectToCheckout()">Or choose other payment method</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/checkout.js') }}"></script>
+    <script>
+        function redirectToCheckout() {
+            window.location.href = "/checkout";
+        }
+    </script>
+</body>
+</html>

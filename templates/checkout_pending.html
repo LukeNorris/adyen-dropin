@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+  <title>Confirmation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/status.css') }}">
+</head>
+<body>
+    <title>Confirmation</title>
+
+    <div class="status-container">
+        <div class="status">
+            <img src="{{ url_for('static', filename='img/pending.svg') }}" class="status-image"/>
+            <img src="{{ url_for('static', filename='img/thank-you.svg') }}" class="status-image-thank-you"/>
+            <p class="status-message">Your order is being processed. We will send confirmation to your email shortly</p>
+            <a class="button" href="/">Return Home</a>
+        </div>
+    </div>
+</body>

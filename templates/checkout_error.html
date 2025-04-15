@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+  <title>Confirmation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/status.css') }}">
+</head>
+<body>
+    <title>Confirmation</title>
+
+    <div class="status-container">
+        <div class="status">
+            <img src="{{ url_for('static', filename='img/error.svg') }}" class="status-image"/>
+            <p class="status-message">Something went wrong! There was an error.</p>
+            <a class="button" href="/">Try Again</a>
+        </div>
+    </div>
+</body>
